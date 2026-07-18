@@ -1,0 +1,27 @@
+{
+  "name": "bitbooks",
+  "version": "0.1.0",
+  "description": "BitBooks — double-entry bookkeeping for bitcoiners. Books you own, basis you can prove.",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build:app": "esbuild src/app/main.tsx --bundle --minify --format=iife --jsx=automatic --define:process.env.NODE_ENV='\"production\"' --outfile=dist/.bundle.js",
+    "build": "npm run build:app && node scripts/build-site.mjs"
+  },
+  "license": "FSL-1.1-MIT",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "esbuild": "^0.28.1",
+    "fast-check": "^4.9.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8"
+  },
+  "private": true
+}
